@@ -19,17 +19,30 @@
   </li>
 </ul>
 -->
-<mat-sidenav-container fullscreen>
-  <mat-sidenav #sidenav>
+
+<mat-sidenav-container fullscreen  >  
+    <mat-toolbar  color="accent">
+      <button mat-button (click)="sidenav.toggle()" bgcolor="white">
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
+      <img src="./assets/img/favicon_symbol.png" />
+      <span> Nowra Nowri</span>
+    </mat-toolbar>
+
+
+  
+  <mat-sidenav  #sidenav >
     <mat-toolbar>
       
       <mat-toolbar-row routerLink="/">
         <span>Home</span>
       </mat-toolbar-row>
        <mat-toolbar-row routerLink="/about">
-        <span>Searche</span>
+        <span>Search</span>
       </mat-toolbar-row>
-      <mat-toolbar-row routerLink="/about">
+      <mat-toolbar-row routerLink="/register">
         <span>Register</span>
       </mat-toolbar-row>
       <mat-toolbar-row routerLink="/about">
@@ -37,19 +50,13 @@
       </mat-toolbar-row>     
     </mat-toolbar>
   </mat-sidenav>
-  <mat-toolbar color="accent" >
-    <button mat-button (click)="sidenav.toggle()" bgcolor="white" >     
-      <mat-icon>                 
-      menu
-      </mat-icon>
-    </button> 
-    <img src="./assets/img/favicon_symbol.png"  />  
-   <span> Nowra Nowri</span>
-  </mat-toolbar>
+  
   <div marign="body-margin" align="center">
        <router-outlet>         
        </router-outlet>
   </div>
- 
+
 </mat-sidenav-container>
+
+
 
