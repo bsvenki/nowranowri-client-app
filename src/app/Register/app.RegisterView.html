@@ -1,0 +1,46 @@
+<form>
+  <h3>Registration</h3>
+  <div class="example-form">
+    <mat-form-field class="example-full-width" >
+      <span matPrefix>+91 &nbsp;</span>
+      <input name="UserMobile" type="tel" matInput placeholder="Mobile Number" required [(ngModel)]="RegisterObj.UserMobile">
+      <!--<mat-icon matSuffix>mode_edit</mat-icon>-->
+      <mat-error *ngIf="UserMobile.invalid">{{getMobileErrorMessage()}}</mat-error>
+      <mat-hint><strong>Enter mobile number.</strong> </mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input name="UserEmail" matInput  placeholder="Email" [formControl]="UserEmail" required [(ngModel)]="RegisterObj.UserEmail">
+      <mat-error *ngIf="UserEmail.invalid">{{getEmailErrorMessage()}}</mat-error>
+      <mat-hint><strong>Enter email id.</strong> </mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input name="UserPassword" matInput type="password" placeholder="Password" [formControl]="UserPassword" required [(ngModel)]="RegisterObj.UserPassword" >
+      <mat-error *ngIf="UserPassword.invalid">{{getPasswordErrorMessage()}}</mat-error>
+      <mat-hint><strong>Enter password.</strong> </mat-hint>
+    </mat-form-field>
+
+
+    <div class="button-row">
+      <button  mat-raised-button color="accent" (click)="Add()">Register</button>
+    </div>
+
+
+  </div>
+</form>
+<!--
+<table>
+  <tr>
+    <td>Mobile Number</td>
+    <td>Emal ID</td>
+    <td>Password</td>
+  </tr>
+  <tr *ngFor="let regis of RegisterObjs">
+    <td>{{regis.UserMobile}}</td>
+    <td>{{regis.UserEmail}}</td>
+    <td>{{regis.UserPassword}}</td>
+  </tr>
+</table>
+-->

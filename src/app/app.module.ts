@@ -1,16 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatProgressBarModule,MatFormFieldModule,MatInputModule,MatRippleModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { routing } from './app.routing';
+import 'hammerjs';
 
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatProgressBarModule} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-import { routing } from './app.routing';
-import 'hammerjs';
+import { RegisterComponent } from './Register/app.RegisterComponent'
 
 
 
@@ -18,17 +19,23 @@ import 'hammerjs';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     routing, 
     MatToolbarModule, 
     MatButtonModule, 
     MatIconModule, 
     MatSidenavModule,
     MatProgressBarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,     
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
