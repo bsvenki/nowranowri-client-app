@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes,RouterModule } from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatProgressBarModule,MatFormFieldModule,MatInputModule,MatRippleModule} from '@angular/material';
+import {CdkTableModule} from '@angular/cdk/table';
+import { MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatProgressBarModule,MatFormFieldModule,MatInputModule,MatRippleModule,MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { routing } from './app.routing';
 import 'hammerjs';
@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './Register/app.RegisterComponent'
+import { MediaMatcher } from '@angular/cdk/layout';
 
 
 
@@ -35,11 +36,15 @@ import { RegisterComponent } from './Register/app.RegisterComponent'
     BrowserAnimationsModule,     
     MatFormFieldModule,
     MatInputModule,
-    MatRippleModule   
+    MatRippleModule,
+    CdkTableModule,
+    MatListModule
+    
+        
   ],
-  providers: [],
+  providers: [MediaMatcher],
   bootstrap: [AppComponent]
 })
 
 
-export class AppModule { }
+export class AppModule {}
