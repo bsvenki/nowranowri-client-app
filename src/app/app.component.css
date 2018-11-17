@@ -20,6 +20,13 @@ h1 {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
+  background-color: #FFEB3B;
+  
+  
+}
+
+.mat-accent {
+  background: #FFEB3B;
   
 }
 
@@ -41,5 +48,5 @@ h1.example-app-name {
 }
 
 .example-sidenav{
-  background-color: #d5d8ff;
+  background-color: #8BC34A;
 }
